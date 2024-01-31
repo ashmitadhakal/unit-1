@@ -1,1 +1,7 @@
 /* Stylesheet by Ashmita, 2024 */
+#mydiv {
+    background-color: red;
+    width: 80%;
+    margin: 0 auto;
+    height: 100px;
+}
