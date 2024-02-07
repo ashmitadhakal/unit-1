@@ -58,15 +58,16 @@ function cities(){
 	addEvents();
 
 };
+//Function to add new column to the table
 	function addColumns(cityPop){
-		
+		//selecting all table rows and itirating over them using foreach
 		document.querySelectorAll("tr").forEach(function(row, i){
 
 			if (i == 0){
 
 				row.insertAdjacentHTML('beforeend', '<th>City Size</th>');
 			} else {
-
+				//determining size based on the population values
 				var citySize;
 
 				if (cityPop[i-1].population < 100000){
@@ -78,18 +79,18 @@ function cities(){
 				} else {
 					citySize = 'Large';
 				};
-
+				//adding new row values to the city Size column
 				row.insertAdjacentHTML('beforeend','<td>' + citySize + '</td>');
 			};
 		});
 	};
-
+//Function to add event listner to the table elements: it adds hover to table where the color of text changes randomly
 	function addEvents(){
 
 		document.querySelector("table").addEventListener("mouseover", function(){
 			
 			var color = "rgb(";
-
+//Using loop to generate random RGB values
 			for (var i=0; i<3; i++){
 
 				var random = Math.round(Math.random() * 255);
@@ -102,15 +103,15 @@ function cities(){
 				} else {
 					color += ")";
 			};
-
+//Setting background color to the generated colors
 			document.querySelector("table").style.backgroundColor = color;
 		}});
-
+//function to display alert message when the table is clicked
 		function clickme(){
 
 			alert('Hey, you clicked me!');
 		};
-
+//adding event listener to the table
 		document.querySelector("table").addEventListener("click", clickme)
 	};
 	document.addEventListener('DOMContentLoaded',initialize)
