@@ -55,5 +55,6 @@ function cities(){
 
     //add the table to the div in index.html
     document.querySelector("#mydiv").appendChild(table);
+    
 };
 document.addEventListener('DOMContentLoaded',initialize)

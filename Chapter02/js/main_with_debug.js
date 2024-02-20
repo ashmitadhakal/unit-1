@@ -104,7 +104,7 @@ function cities(){
 					color += ")";
 			};
 //Setting background color to the generated colors
-			document.querySelector("table").style.backgroundColor = color;
+			document.querySelector("table").style.color = color;
 		}});
 //function to display alert message when the table is clicked
 		function clickme(){

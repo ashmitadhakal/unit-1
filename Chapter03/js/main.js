@@ -119,7 +119,7 @@ function cities(){
 	
 //Lab 3 Solution
 	function debugCallback(response){
-		document.querySelector("#mydiv").insertAdjacentHTML('beforeend', 'GeoJSON data: ' + JSON.stringify(response))
+		document.querySelector("#mydiv").insertAdjacentHTML('beforeend', '<br>GeoJSON data:</br> ' + JSON.stringify(response))
 	};
 	function debugAjax(){
 		fetch("data/MegaCities.geojson")    //Fetching MegaCities data
